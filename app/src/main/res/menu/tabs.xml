@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_home"
+        android:icon="@drawable/outline_home_24"
+        android:title="@string/gallery" />
+    <item
+        android:id="@+id/tab_alarm"
+        android:icon="@drawable/outline_send_24"
+        android:title="@string/send" />
+    <item
+        android:id="@+id/tab_bread"
+        android:icon="@drawable/outline_cloud_24"
+        android:title="@string/cloud" />
+    <item
+        android:id="@+id/tab_cart"
+        android:icon="@drawable/outline_account_circle_24"
+        android:title="@string/account" />
+</menu>
