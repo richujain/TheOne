@@ -4,4 +4,6 @@
     <string name="send">Send</string>
     <string name="cloud">Cloud</string>
     <string name="account">Account</string>
+    <string name="emailID">Email ID</string>
+    <string name="password">Password</string>
 </resources>

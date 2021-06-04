@@ -20,4 +20,21 @@
         app:abb_tabs="@menu/tabs"
         app:abb_selectedIndex="1" />
 
+    <androidx.appcompat.widget.Toolbar
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The One"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
+
 </RelativeLayout>
