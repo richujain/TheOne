@@ -5,10 +5,61 @@
     android:layout_height="match_parent"
     tools:context=".fragments.SendFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Send" />
+        android:orientation="vertical"
+        android:background="@color/grey">
+
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The One Send"
+            android:textColor="@color/white"
+            android:layout_below="@+id/imageViewLogo"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            />
+        <TextView
+            android:id="@+id/textViewSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Upto to 2GB file"
+            android:textColor="@color/white"
+            android:layout_below="@+id/textViewTitle"
+            android:gravity="center"
+            android:layout_marginTop="-5dp"
+            android:textSize="15dp"/>
+
+
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Get Sharable Link"
+            style="@style/AppTheme.RoundedCornerMaterialButton"/>
+    </RelativeLayout>
 
 </FrameLayout>
