@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 import com.richujain.theone.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -87,17 +88,11 @@ class GalleryFragment : Fragment() {
             READ_RQ
         )
         //checkForPermissions(android.Manifest.permission.WRITE_EXTERNAL_STORAGE,"writestorage",READ_RQ)
-        val uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-        val projection = arrayOf(MediaStore.MediaColumns.DATA)
-        val cursor: Cursor? = requireActivity()!!.contentResolver.query(uri, projection, null, null, null)
-        if (cursor != null) {
-            while (cursor.moveToNext()){
-                Log.d("cursor",""+ cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA)))
-            }
-            Log.d("cursor is "," Not Empty"+cursor.count)
-        }
-        else{
-            Log.d("cursor is: ","Empty")
+        val fab: View = view.findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
+            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+                .setAction("Action", null)
+                .show()
         }
     }
 
