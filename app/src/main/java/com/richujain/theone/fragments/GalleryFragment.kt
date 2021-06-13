@@ -90,10 +90,13 @@ class GalleryFragment : Fragment() {
         //checkForPermissions(android.Manifest.permission.WRITE_EXTERNAL_STORAGE,"writestorage",READ_RQ)
         val fab: View = view.findViewById(R.id.fab)
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .show()
+//            Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null)
+//                .show()
+            openGallery()
         }
     }
+    private fun openGallery(){
 
+    }
 }
