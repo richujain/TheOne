@@ -27,30 +27,30 @@
             android:id="@+id/textViewTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="The One Send"
+            android:text="@string/the_one_send"
             android:textColor="@color/white"
             android:layout_below="@+id/imageViewLogo"
             android:gravity="center"
             android:layout_marginTop="25dp"
             android:textStyle="bold"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             />
         <TextView
             android:id="@+id/textViewSubTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Send Upto to 2GB file"
+            android:text="@string/send_upto_to_2gb_file"
             android:textColor="@color/white"
             android:layout_below="@+id/textViewTitle"
             android:gravity="center"
             android:layout_marginTop="-5dp"
-            android:textSize="15dp"/>
+            android:textSize="15sp"/>
 
 
 
         <Button
-            android:id="@+id/buttonLogin"
+            android:id="@+id/buttonSharableLink"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -58,7 +58,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
-            android:text="Get Sharable Link"
+            android:text="@string/get_sharable_link"
             style="@style/AppTheme.RoundedCornerMaterialButton"/>
     </RelativeLayout>
 

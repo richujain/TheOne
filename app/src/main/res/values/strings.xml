@@ -8,4 +8,7 @@
     <string name="password">Password</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_sharable_link">Get Sharable Link</string>
+    <string name="send_upto_to_2gb_file">Send Upto to 2GB file</string>
+    <string name="the_one_send">The One Send</string>
 </resources>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.richujain.theone.R
 
 
@@ -18,4 +19,11 @@ class SendFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_send, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val buttonLogin = view.findViewById<Button
+                >(R.id.buttonSharableLink)
+        buttonLogin.setOnClickListener() {
+
+        }
+    }
 }
