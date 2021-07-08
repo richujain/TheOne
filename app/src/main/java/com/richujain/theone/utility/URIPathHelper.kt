@@ -8,6 +8,7 @@ import android.os.Build
 import android.os.Environment
 import android.provider.DocumentsContract
 import android.provider.MediaStore
+import android.util.Log
 
 class URIPathHelper {
 
@@ -27,6 +28,10 @@ class URIPathHelper {
 
             } else if (isDownloadsDocument(uri)) {
                 val id = DocumentsContract.getDocumentId(uri)
+                if (id.startsWith("raw:")) {
+                    return id.replaceFirst("raw:", "");
+                }
+                Log.d("contenturi is ",""+id.toString());
                 val contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), java.lang.Long.valueOf(id))
                 return getDataColumn(context, contentUri, null, null)
             } else if (isMediaDocument(uri)) {

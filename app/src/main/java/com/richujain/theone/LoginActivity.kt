@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
         RetrofitClient.instance.userLogin(email, password)
             .enqueue(object: Callback<LoginResponse> {
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                    Toast.makeText(applicationContext, t.message+"Here123", Toast.LENGTH_LONG).show()
+                    Toast.makeText(applicationContext, t.message+"Login Failed", Toast.LENGTH_LONG).show()
                 }
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if(response.isSuccessful){

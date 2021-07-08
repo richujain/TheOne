@@ -7,13 +7,14 @@ import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 
 object RetrofitClient {
 
     private val AUTH = "Basic "+ Base64.encodeToString("ubuntu:nine9eightzero".toByteArray(), Base64.NO_WRAP)
 
-    private const val BASE_URL = "http://72.140.184.207/"
+    private const val BASE_URL = "http://192.168.0.10:80"
 
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->
@@ -25,7 +26,10 @@ object RetrofitClient {
 
             val request = requestBuilder.build()
             chain.proceed(request)
-        }.build()
+        }.connectTimeout(20, TimeUnit.SECONDS)
+        .readTimeout(20, TimeUnit.SECONDS)
+        .writeTimeout(20, TimeUnit.SECONDS)
+        .build()
     var gson: Gson = GsonBuilder()
         .setLenient()
         .create()
